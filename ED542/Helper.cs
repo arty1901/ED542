@@ -32,7 +32,7 @@ namespace ED542
             {
                 foreach (string file in files)
                 {
-                    int temp = file.IndexOf(@"\");
+                    int temp = file.LastIndexOf(@"\");
                     listBox.Items.Add(file.Substring(temp + 1));
                 }
             }
