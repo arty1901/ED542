@@ -8,7 +8,7 @@ namespace ED542
     // Вспомогательный класс, в котором описаны методы "облегчающие" жизнь
     class Helper
     {
-        public string Path = "xml";
+        public string Path = @"C:\appFolders\xml";
         // Шаблоны для регулярных выражений
         private string edNoPattern = @"\d{1,9}";
         private string edAuthorPattern = @"\d{10}";
@@ -20,6 +20,12 @@ namespace ED542
         // ScanDirectory считывает список файлов, которые записаны в папку xml. Эти имена файлов записываются listBox
         public void ScanDirectory(ListBox listBox)
         {
+            DirectoryInfo dirInfo = new DirectoryInfo(Path);
+            if (!dirInfo.Exists)
+            {
+                dirInfo.Create();
+            }
+
             string[] files = Directory.GetFiles(Path);
 
             if (files.Length != 0)
