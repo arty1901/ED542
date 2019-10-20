@@ -193,7 +193,7 @@ namespace XMLnamespace
 
             try
             {
-                doc.Save("xml/" + fileName);
+                doc.Save(_helper.Path + "/" + fileName);
             }
             catch (Exception e)
             {
