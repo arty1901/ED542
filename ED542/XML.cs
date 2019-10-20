@@ -242,7 +242,7 @@ namespace XMLnamespace
             XmlSchemaSet schema = new XmlSchemaSet();
 
             // Добавляем в схему xsd файл, который будет проверять входящий файл
-            schema.Add("urn:cbr-ru:ed:v2.0", "XMLSchema1.xsd");
+            schema.Add("urn:cbr-ru:ed:v2.0", "../../xsd/XMLSchema1.xsd");
 
             bool error = false;
             string errorMessage = "";

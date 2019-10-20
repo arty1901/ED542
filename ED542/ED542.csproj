@@ -93,6 +93,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="xsd\cbr_ed_basetypes_v2018.3.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\cbr_ed_leaftypes_v2019.2.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\cbr_ed_objects_v2019.2.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\XMLSchema1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
