@@ -132,10 +132,17 @@ namespace ED542
             _xml.EdAuthor = Int64.Parse(EDAuthor.Text);
             _xml.EdCode = RepeatReceptInqCode.Value;
             _xml.ArmNo = Int32.Parse(ARMNo.Text);
-            _xml.EdTypeNo = EDTypeNo.Text;
 
-            _xml.EdNoRef = Int32.Parse(EDNoRef.Text);
-            _xml.EdAuthorRef = Int64.Parse(EDAuthorRef.Text);
+            if (_xml.EdCode == 1)
+            {
+                _xml.EdNoRef = Int32.Parse(EDNoRef.Text);
+                _xml.EdAuthorRef = Int64.Parse(EDAuthorRef.Text);
+            }
+
+            if (_xml.EdCode == 3)
+            {
+                _xml.EdTypeNo = EDTypeNo.Text;
+            }
         }
         
         // записывает данные со свойств класса в поля
